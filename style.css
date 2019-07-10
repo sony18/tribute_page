@@ -1,0 +1,105 @@
+/* css variable */
+:root {
+  --color-white: #fff;
+  --color-dark: #333;
+  --color-medium: #414141;
+  --color-light:#b3b0b0;
+  --color-silver: #dee1e4;
+  --color-green: #17f5d7;
+
+  --bg-light: #e4e1e1;
+  --bg-dark: #666363;
+  --bg-blue: dodgerblue;
+  --bg-white: #fff;
+
+}
+/* Resetting style */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--color-dark, #333);
+  line-height: 2rem;
+  margin-bottom: .8rem;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+section,
+main,
+figure {
+  display: block;
+}
+
+body {
+  /* font-family: "Arial Narrow", Arial, serif, sans-serif; */
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background: var(--bg-light);
+  color: var(--color-dark);
+  font-weight: normal;
+}
+
+li{
+  margin-bottom:.5rem;
+}
+
+
+.container {
+  max-width: 70%;
+  margin: 30px auto;
+  padding: 2rem;
+}
+
+/* ..............GridLayout. for image & content .............. */
+.d-grid {
+  display: grid;
+  justify-content: center;
+}
+
+.grid--2col {
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-gap: 40px;
+
+}
+
+/* Image container style */
+#img-div {
+  max-width: 50vw;
+  height: 50vh;
+}
+
+/* For image responsiveness */
+#image {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  min-height: 100%;  
+}
+
+#img-caption {
+  font-size: 0.8rem;
+  color:var(--color-medium);
+}
+
+
+/*For small screen below 460px- 1 column layout */
+@media(max-width:460px){
+.grid--2col{
+grid-template-columns: 1fr;
+grid-gap: 13rem;
+}
+}
